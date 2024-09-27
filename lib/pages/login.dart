@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:kasirs/pages/homepage.dart';
+import 'package:kasirs/pages/signup.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -82,7 +83,14 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
+                        },
                         style: ElevatedButton.styleFrom(
                           //primary: Colors.red, // background //GAJADI ANJAY
                         ),
@@ -95,7 +103,14 @@ class LoginPage extends StatelessWidget {
                       children: [
                         Text("Don't have an account?"),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CreateAccountPage(),
+                              ),
+                            );
+                          },
                           child: Text('Signup'),
                         ),
                       ],
